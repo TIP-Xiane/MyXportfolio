@@ -1,0 +1,212 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=General+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 4%;
+    --foreground: 210 15% 90%;
+
+    --card: 220 18% 8%;
+    --card-foreground: 210 15% 90%;
+
+    --popover: 220 18% 8%;
+    --popover-foreground: 210 15% 90%;
+
+    --primary: 210 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 210 15% 90%;
+
+    --muted: 220 12% 15%;
+    --muted-foreground: 210 8% 45%;
+
+    --accent: 185 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 12% 15%;
+    --input: 220 12% 15%;
+    --ring: 210 80% 55%;
+
+    --radius: 0.75rem;
+
+    /* Extended palette — cool, secure, elegant */
+    --violet: 230 55% 55%;
+    --teal: 185 70% 45%;
+    --indigo: 220 65% 50%;
+    --cyan: 195 85% 45%;
+    --steel: 215 25% 40%;
+
+    --sidebar-background: 220 20% 4%;
+    --sidebar-foreground: 210 15% 90%;
+    --sidebar-primary: 210 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 210 15% 90%;
+    --sidebar-border: 220 12% 15%;
+    --sidebar-ring: 210 80% 55%;
+
+    --ease-out-quad: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --shadow-color: 220 20% 2%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+    outline-offset: 2px;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Satoshi', 'General Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  /* Smooth text selection */
+  ::selection {
+    background-color: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
+  }
+
+  ::-moz-selection {
+    background-color: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(210 80% 55%), hsl(195 85% 45%), hsl(185 70% 45%));
+  }
+
+  .gradient-line {
+    background: linear-gradient(90deg, transparent, hsl(210 80% 55%), hsl(195 85% 45%), hsl(185 70% 45%), transparent);
+  }
+
+  .gradient-glow {
+    background: linear-gradient(135deg, hsl(220 65% 50%), hsl(210 80% 55%), hsl(195 85% 45%), hsl(185 70% 45%));
+  }
+
+  .gradient-border {
+    background: transparent;
+    border: 1px solid hsl(210 80% 55% / 0.5);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .gradient-border:hover {
+    border-color: hsl(210 80% 55% / 0.8);
+    box-shadow: 0 0 12px hsl(210 80% 55% / 0.15), inset 0 0 12px hsl(210 80% 55% / 0.05);
+  }
+
+  .gradient-border span,
+  .gradient-border {
+    text-shadow: 0 0 10px hsl(210 80% 55% / 0.5), 0 0 3px hsl(195 85% 45% / 0.35);
+  }
+
+  .nav-link {
+    @apply relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-full h-px origin-right scale-x-0;
+    background: linear-gradient(90deg, hsl(210 80% 55%), hsl(185 70% 45%));
+    transition: transform 250ms var(--ease-out-quad);
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  .card-surface {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.02), 0 2px 12px hsla(220, 20%, 2%, 0.4);
+    transition: transform 300ms var(--ease-out-quad), box-shadow 300ms var(--ease-out-quad), border-color 300ms var(--ease-out-quad);
+  }
+
+  .card-surface:hover {
+    transform: translateY(-4px);
+    border-color: hsl(var(--primary) / 0.25);
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.04), 0 12px 32px hsla(220, 20%, 2%, 0.5), 0 0 50px hsl(var(--primary) / 0.08);
+  }
+
+  .skill-card {
+    background: transparent;
+    border: 1px solid hsla(0, 0%, 100%, 0.06);
+    transition: background 200ms var(--ease-out-quad), border-color 200ms var(--ease-out-quad);
+  }
+
+  .skill-card:hover {
+    background: hsl(var(--card));
+    border-color: hsla(0, 0%, 100%, 0.1);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+/* Full-screen section snapping */
+section[id] {
+  min-height: 100vh;
+  /* let content grow if needed (mobile) */
+  height: auto;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: visible;
+  scroll-margin-top: 4rem; /* avoid being hidden behind fixed top nav */
+}
+
+/* Override for sections with specific sizing needs */
+section[id="home"] {
+  min-height: 100vh;
+  height: auto;
+}
+
+section[id="about"] {
+  min-height: 100vh;
+  height: auto;
+  padding: 0 !important;
+}
+
+section[id="skills"] {
+  min-height: 100vh;
+  height: auto;
+  padding: 0 !important;
+}
+
+section[id="projects"] {
+  min-height: 100vh;
+  height: auto;
+  padding: 0 !important;
+}
+
+section[id="contact"] {
+  min-height: 100vh;
+  height: auto;
+  padding: 0 !important;
+}
