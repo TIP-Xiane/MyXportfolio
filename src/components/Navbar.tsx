@@ -12,7 +12,7 @@ const links = [
   { label: "Contact", href: "#contact", icon: MessageSquare },
 ];
 // TODO: Update Landing URL when the landing page is deployed (currently placeholder)
-const portfolioLink = { label: "Landing", href: "/under-construction", icon: ArrowUp, isHighlighted: true };
+const portfolioLink = { label: "Landing", href: "https://emtech-landing-fawn.vercel.app/", icon: ArrowUp, isHighlighted: true };
 
 const Navbar = () => {
   const [hovered, setHovered] = useState(false);
