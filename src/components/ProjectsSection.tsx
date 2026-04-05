@@ -3,12 +3,21 @@ import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Switched from Link to useNavigate
 
+// Import project images
+import hinyAppImg from "@/assets/HinyApp.png";
+import kaslaImg from "@/assets/KASLA.png";
+import guideuImg from "@/assets/GUIDEU.png";
+import dauxImg from "@/assets/daux.jpg";
+import adeiImg from "@/assets/adei.jpg";
+import cryptoImg from "@/assets/crypto.jpg";
+import switchlyImg from "@/assets/swtichly.jpg";
+
 const projects = [
   {
     title: "HinyApp — Mental Health Platform",
     description: "Mobile based mental health platform — self-assessment, resources, and peer support for students in Marinduque State University.",
     tags: ["Bootstrap", "Html", "Css", "Javascript"],
-    image: "src/assets/HinyApp.png",
+    image: hinyAppImg,
     github: "https://github.com/TIP-Xiane",
     live: "/project/hinyapp",
   },
@@ -16,7 +25,7 @@ const projects = [
     title: "KASLA- Kalusugan sa Isla App",
     description: "Web & mobile app connecting health workers with communities — appointment scheduling, health records, and teleconsultation features.",
     tags: ["Web App", "Website", "Startup Idea", "Team-Project"],
-    image: "src/assets/KASLA.png",
+    image: kaslaImg,
     github: "https://github.com/TIP-Xiane",
     live: "/project/kasla", 
   },
@@ -24,7 +33,7 @@ const projects = [
     title: "Guide U: MarSU Navigation App",
     description: "Rapid prototyping toolkit — boilerplate generator, component library, and deployment pipeline.",
     tags: ["QGIS Mapping", "React", "Docker", "MongoDB"],
-    image: "src/assets/guideu.png",
+    image: guideuImg,
     github: "https://github.com/TIP-Xiane",
     live: "/project/guide-u", 
   },
@@ -32,7 +41,7 @@ const projects = [
     title: "DAUX: Detection Alarm Unit with Extension",
     description: "Custom Arduino-based sensor system for motion detection and security with alarm system.",
     tags: ["Arduino", "Hardware", "Designing", "Team-Project"],
-    image: "src/assets/daux.jpg",
+    image: dauxImg,
     github: "https://github.com/TIP-Xiane",
     live: "https://drive.google.com/file/d/1hbKJFXT6M5-m-rrDf9KSXJXsiAGkAEUo/view?usp=sharing",
   },
@@ -40,7 +49,7 @@ const projects = [
     title: "ADEI Student Portal System",
     description: "Simple and responsive student enrollment portal system - built with react for academic institutions.",
     tags: ["React", "Javascript", "Netlify", "Website"],
-    image: "src/assets/adei.jpg",
+    image: adeiImg,
     github: "https://github.com/TIP-Xiane",
     live: "https://resplendent-pastelito-480fd4.netlify.app/",
   },
@@ -48,7 +57,7 @@ const projects = [
     title: "CryptoPulse - Cryptocurrency Price Tracker",
     description: "Cryptocurrency price tracker website - real-time data, historical charts, with top 10 cryptocurrencies.",
     tags: ["React", "API", "Vercel", "Website"],
-    image: "src/assets/crypto.jpg",
+    image: cryptoImg,
     github: "https://github.com/TIP-Xiane",
     live: "https://crypto-pulse-qqj8jb7ce-tip-xianes-projects.vercel.app/",
   },
@@ -56,7 +65,7 @@ const projects = [
     title: "Switchly - Smart Breaker",
     description: "Embedded IoT solution — for retrofitting homes with smart monitoring and control via mobile app through Blynk.",
     tags: ["ESP32", "Blynk", "IoT", "C++"],
-    image: "src/assets/swtichly.jpg",
+    image: switchlyImg,
     github: "https://github.com/TIP-Xiane",
     live: "/project/switchly", 
   },
