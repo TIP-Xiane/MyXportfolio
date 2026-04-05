@@ -11,7 +11,7 @@ const links = [
   { label: "Projects", href: "#projects", icon: FolderOpen },
   { label: "Contact", href: "#contact", icon: MessageSquare },
 ];
-// TODO: Update Landing URL when the landing page is deployed (currently placeholder)
+// Landing page URL
 const portfolioLink = { label: "Landing", href: "https://emtech-landing-fawn.vercel.app/", icon: ArrowUp, isHighlighted: true };
 
 const Navbar = () => {
@@ -44,6 +44,11 @@ const Navbar = () => {
   };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Allow external links to work normally
+    if (href.startsWith("http://") || href.startsWith("https://")) {
+      return;
+    }
+
     e.preventDefault();
 
     // Short-circuit to allow navigating to root route or out-of-page links.
