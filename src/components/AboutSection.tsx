@@ -11,7 +11,7 @@ const socials = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="min-h-screen relative overflow-hidden py-16 md:py-0 flex items-center">
+    <section id="about" className="min-h-screen relative overflow-hidden overflow-x-hidden py-16 md:py-0 flex items-center" style={{ scrollMarginTop: "0px" }}>
       {/* Gradient accents */}
       <div
         className="absolute top-1/2 -left-[20%] w-[600px] h-[600px] rounded-full pointer-events-none"

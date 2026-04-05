@@ -4,7 +4,8 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative"
+      className="min-h-screen flex items-center justify-center relative overflow-x-hidden"
+      style={{ scrollMarginTop: "0px" }}
     >
       {/* Background wrapper (ONLY this is clipped) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

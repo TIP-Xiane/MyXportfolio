@@ -6,8 +6,7 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // avoid fighting hash-based intra-page navigation
-    if (window.location.hash) return;
+    // Always scroll to top when pathname changes (route change)
     window.scrollTo(0, 0);
   }, [pathname]);
 

@@ -83,7 +83,7 @@ const SkillBar = ({ name, level }: { name: string, level: number }) => (
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="min-h-screen relative overflow-hidden py-24 md:py-32 flex items-center">
+    <section id="skills" className="min-h-screen relative overflow-hidden overflow-x-hidden py-24 md:py-32 flex items-center" style={{ scrollMarginTop: "0px" }}>
       {/* Gradient accents */}
       <div
         className="absolute top-0 -right-[10%] w-[600px] h-[600px] rounded-full pointer-events-none"

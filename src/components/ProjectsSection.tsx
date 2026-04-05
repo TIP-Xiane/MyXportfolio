@@ -124,7 +124,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="min-h-screen relative overflow-hidden py-16 md:py-0 flex items-center">
+    <section id="projects" className="min-h-screen relative overflow-hidden overflow-x-hidden py-16 md:py-0 flex items-center" style={{ scrollMarginTop: "0px" }}>
       {/* Dynamic blurred bg */}
       <AnimatePresence mode="popLayout">
         <motion.div
