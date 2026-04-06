@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "Guide U: MarSU Navigation App",
-    description: "Rapid prototyping toolkit — boilerplate generator, component library, and deployment pipeline.",
+    description: "Custom mapping application for navigating the campus of Marinduque State University — built with QGIS, React, and MongoDB for real-time updates and route planning.",
     tags: ["QGIS Mapping", "React", "Docker", "MongoDB"],
     image: guideuImg,
     github: "https://github.com/TIP-Xiane",

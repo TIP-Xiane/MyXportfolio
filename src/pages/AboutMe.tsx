@@ -4,6 +4,20 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, GraduationCap, Heart, Star, MapPin, Trophy } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import React, { useRef } from "react";
+import xiane2 from "../assets/xiane2.JPG";
+import me2 from "../assets/me2.jpg";
+import xiane from "../assets/xiane.jpg";
+import kid1 from "../assets/kid1.jpg";
+import tipIcon from "../assets/tip.png";
+import marsuLogo from "../assets/MARSU LOGO.png";
+import bangbangLogo from "../assets/bangbang.png";
+import tesLogo from "../assets/tes.png";
+import readingImg from "../assets/reading.jpg";
+import journalImg from "../assets/journal.jpg";
+import musicImg from "../assets/music.avif";
+import guitarImg from "../assets/guitar.jpg";
+import cookingImg from "../assets/cooking.jpg";
+import finliteracyImg from "../assets/finliteracy.jpg";
 
 // =======================
 // Animations & Variants
@@ -176,10 +190,10 @@ const AboutMe = () => {
           {/* Clean, Uniform Grid Layout for Images */}
           <div className="grid grid-cols-2 gap-4 md:gap-6 h-full mt-10 xl:mt-0 content-center">
             {[
-              { src: "src/assets/xiane2.JPG", alt: "HinyApp Dev" },
-              { src: "src/assets/me2.jpg", alt: "Startup Pitch" },
-              { src: "src/assets/xiane.jpg", alt: "Growth" },
-              { src: "src/assets/kid1.jpg", alt: "Early Recognition" }
+              { src: xiane2, alt: "HinyApp Dev" },
+              { src: me2, alt: "Startup Pitch" },
+              { src: xiane, alt: "Growth" },
+              { src: kid1, alt: "Early Recognition" }
             ].map((img, idx) => (
               <motion.div 
                 key={idx}
@@ -212,11 +226,11 @@ const AboutMe = () => {
                 
                 <div className="relative border-l-2 border-primary/30 ml-6 space-y-12">
                     {[
-                        { school: "Technological Institute of the Philippines", years: "2025 – Present", icon: "src/assets/tip.png", details: "BS Computer Engineering" },
-                        { school: "Marinduque State University – College of Engineering", years: "2023 – 2024", icon: "src/assets/MARSU LOGO.png", details: "BS Computer Engineering" },
-                        { school: "Marinduque State University – Integrated Highschool", years: "2021 – 2023", icon: "src/assets/MARSU LOGO.png", details: "Science Technology Engineering and Mathematics - Academic Strand" },
-                        { school: "Bangbang National High School – Special Science Class", years: "2017 – 2020", icon: "src/assets/bangbang.png", details: "Class Salutatorian" },
-                        { school: "Tiguion Elementary School", years: "2011 – 2016", icon: "src/assets/tes.png", details: "Class Valedictorian" },
+                        { school: "Technological Institute of the Philippines", years: "2025 – Present", icon: tipIcon, details: "BS Computer Engineering" },
+                        { school: "Marinduque State University – College of Engineering", years: "2023 – 2024", icon: marsuLogo, details: "BS Computer Engineering" },
+                        { school: "Marinduque State University – Integrated Highschool", years: "2021 – 2023", icon: marsuLogo, details: "Science Technology Engineering and Mathematics - Academic Strand" },
+                        { school: "Bangbang National High School – Special Science Class", years: "2017 – 2020", icon: bangbangLogo, details: "Class Salutatorian" },
+                        { school: "Tiguion Elementary School", years: "2011 – 2016", icon: tesLogo, details: "Class Valedictorian" },
                     ].map((item, i) => (
                         <div key={i} className="relative pl-12 md:pl-16">
                             {/* Icon Node */}
@@ -278,12 +292,12 @@ const AboutMe = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {[
-              { title: "Reading", img: "src/assets/reading.jpg", desc: "Exploring ideas, stories, and personal growth through books." },
-              { title: "Journaling", img: "src/assets/journal.jpg", desc: "Reflecting, planning, and documenting experiences for growth." },
-              { title: "Listening to Music", img: "src/assets/music.avif", desc: "Enjoying music that blends jazz, old, and modern styles." },
-              { title: "Playing Guitar", img: "src/assets/guitar.jpg", desc: "Expressing creativity and emotion through instruments." },
-              { title: "Cooking", img: "src/assets/cooking.jpg", desc: "Valuing creativity in the kitchen and the art of preparation." },
-              { title: "Financial Literacy", img: "src/assets/finliteracy.jpg", desc: "Managing finances wisely and building sustainable habits." },
+              { title: "Reading", img: readingImg, desc: "Exploring ideas, stories, and personal growth through books." },
+              { title: "Journaling", img: journalImg, desc: "Reflecting, planning, and documenting experiences for growth." },
+              { title: "Listening to Music", img: musicImg, desc: "Enjoying music that blends jazz, old, and modern styles." },
+              { title: "Playing Guitar", img: guitarImg, desc: "Expressing creativity and emotion through instruments." },
+              { title: "Cooking", img: cookingImg, desc: "Valuing creativity in the kitchen and the art of preparation." },
+              { title: "Financial Literacy", img: finliteracyImg, desc: "Managing finances wisely and building sustainable habits." },
             ].map((item, idx) => (
               <motion.div 
                 key={idx} 
