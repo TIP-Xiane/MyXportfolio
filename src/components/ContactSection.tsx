@@ -60,10 +60,22 @@ const ContactSection = () => {
           className="space-y-4 mb-12"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            <input type="text" placeholder="Name" required
-              className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-card text-foreground text-xs sm:text-sm placeholder:text-muted-foreground border border-border focus:outline-none focus:ring-1 focus:ring-ring transition-shadow" />
-            <input type="email" placeholder="Email" required
-              className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-card text-foreground text-xs sm:text-sm placeholder:text-muted-foreground border border-border focus:outline-none focus:ring-1 focus:ring-ring transition-shadow" />
+            <input
+              type="text"
+              placeholder="Name"
+              required
+              pattern="^[A-Za-zÀ-ÿ\s]+$"
+              title="Name can only include letters and spaces"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-card text-foreground text-xs sm:text-sm placeholder:text-muted-foreground border border-border focus:outline-none focus:ring-1 focus:ring-ring transition-shadow"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+              title="Enter a valid email address containing @"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-card text-foreground text-xs sm:text-sm placeholder:text-muted-foreground border border-border focus:outline-none focus:ring-1 focus:ring-ring transition-shadow"
+            />
           </div>
           <textarea placeholder="Your message..." rows={4} required
             className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-card text-foreground text-xs sm:text-sm placeholder:text-muted-foreground border border-border focus:outline-none focus:ring-1 focus:ring-ring transition-shadow resize-none" />
